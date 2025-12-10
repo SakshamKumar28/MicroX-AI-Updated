@@ -13,10 +13,12 @@ origins = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
+
 if settings.CLIENT_ORIGIN:
-    origins.append(settings.CLIENT_ORIGIN)
+    origins.append(settings.CLIENT_ORIGIN.strip().rstrip("/"))
+
 if settings.CLIENT_ORIGINS:
-    origins.extend([o.strip() for o in settings.CLIENT_ORIGINS.split(",")])
+    origins.extend([o.strip().rstrip("/") for o in settings.CLIENT_ORIGINS.split(",")])
 
 app.add_middleware(
     CORSMiddleware,
