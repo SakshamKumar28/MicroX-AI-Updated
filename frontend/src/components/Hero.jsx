@@ -45,8 +45,8 @@ const Hero = () => {
                         Automated detection of pathological patterns with 99.8% accuracy.
                     </p>
 
-                    <form onSubmit={handleRequestAccess} className="flex flex-col sm:flex-row gap-4 max-w-md">
-                         <div className="relative flex-grow w-full">
+                    <form onSubmit={handleRequestAccess} className="w-full max-w-md">
+                         <div className="flex flex-col md:block relative">
                             <input 
                                 type="email" 
                                 value={email}
@@ -57,7 +57,7 @@ const Hero = () => {
                             />
                             <button 
                                 type="submit"
-                                className="w-full mt-4 md:mt-0 md:absolute md:right-2 md:top-2 md:bottom-2 px-8 py-4 md:py-0 bg-dark text-white rounded-full font-bold hover:bg-gray-800 transition-all shadow-lg md:shadow-none"
+                                className="w-full md:w-auto mt-4 md:mt-0 md:absolute md:right-2 md:top-2 md:bottom-2 px-8 py-4 md:py-0 bg-dark text-white rounded-full font-bold hover:bg-gray-800 transition-all shadow-lg md:shadow-none"
                             >
                                 {isSubmitted ? "Request Sent!" : "Request Access"}
                             </button>
