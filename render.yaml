@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: microx-ai-backend
+    env: python
+    region: oregon
+    plan: free
+    root: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGODB_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: ML_MODEL_PATH
+        value: app/ml_service/pathology_final_model.h5
+      - key: PYTHON_VERSION
+        value: 3.9.18

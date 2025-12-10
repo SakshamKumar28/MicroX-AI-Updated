@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+motor
+beanie
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic[email]
+pydantic-settings
+tensorflow
+pillow
+numpy
+cloudinary
+httpx
+pytest

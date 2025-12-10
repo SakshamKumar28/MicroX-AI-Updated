@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* New Edtech-inspired Palette */
+  --color-cream: #FFFBF5;
+  --color-cream-dark: #F7EFE5;
+  --color-dark: #1A1A1A;
+  --color-yellow: #FFD02F;
+  --color-yellow-light: #FFF4C3;
+  --color-purple: #C8B6FF;
+  --color-blue: #A5C8FF;
+  --color-orange: #FFB7B2;
+
+  --color-primary: var(--color-dark);
+  --color-secondary: var(--color-yellow);
+  --color-accent: var(--color-yellow);
+
+  --color-bg-main: var(--color-cream);
+  --color-text-main: var(--color-dark);
+
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --animate-bounce-slow: bounce 3s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+}
+
+@media print {
+  body {
+    background-color: white;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
