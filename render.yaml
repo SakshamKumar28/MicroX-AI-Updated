@@ -20,6 +20,6 @@ services:
       - key: CLIENT_ORIGIN
         sync: false
       - key: ML_MODEL_PATH
-        value: app/ml_service/pathology_final_model.h5
+        value: ml_service/pathology_model.h5
       - key: PYTHON_VERSION
         value: 3.9.18
